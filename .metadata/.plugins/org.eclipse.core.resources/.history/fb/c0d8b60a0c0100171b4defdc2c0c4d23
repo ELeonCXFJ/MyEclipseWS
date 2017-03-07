@@ -1,0 +1,7 @@
+package my.housekeeping.user.dao;
+/**
+ * 用户模块的持久层
+ */
+public class UserDao {
+
+}

@@ -1,0 +1,38 @@
+/**
+ * 
+ */
+package my.housekeeping.user.web.servlet;
+
+
+
+import java.io.IOException;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import my.housekeeping.user.service.UserService;
+import cn.itcast.servlet.BaseServlet;
+
+/**
+ *  
+ * @author Leon-Desktop
+ *
+ */
+public class UserServlet extends BaseServlet {
+	private UserService userService = new UserService();
+	
+	public String ajaxValidatorUserName(HttpServletRequest request,HttpServletResponse response)
+			throws ServletException,IOException {
+		
+	}
+	/**
+	 * 
+	 *注册功能
+	 */
+	public String register(HttpServletRequest request,HttpServletResponse response)
+		throws ServletException,IOException {
+		System.out.println("register()...");
+		return null;
+	}
+}

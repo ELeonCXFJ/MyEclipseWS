@@ -1,0 +1,10 @@
+#Tue Feb 07 20:44:11 CST 2017
+TOMCAT_HOME=F\:\\javaconfig\\apache-tomcat-7.0.75\\apache-tomcat-7.0.75
+TOMCAT_TEMP=F\:\\javaconfig\\apache-tomcat-7.0.75\\apache-tomcat-7.0.75\\temp
+LIBRARY_PATH="C\:\\Program Files (x86)\\Java\\jdk1.7.0_79\\bin;F\:\\javaconfig\\apache-tomcat-7.0.75\\apache-tomcat-7.0.75\\bin"
+TOMCAT_BASE=F\:\\javaconfig\\apache-tomcat-7.0.75\\apache-tomcat-7.0.75
+ENDORSED_DIRS="F\:\\javaconfig\\apache-tomcat-7.0.75\\apache-tomcat-7.0.75/common/endorsed"
+eclipse.preferences.version=1
+JDK_INSTALLATION_NAME=jdk1.7.0_79
+JDK_HOME=C\:\\Program Files (x86)\\Java\\jdk1.7.0_79
+SERVER_ENABLEMENT=true

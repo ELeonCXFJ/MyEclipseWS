@@ -1,0 +1,9 @@
+package my.housekeeping.user.dao;
+/**
+ * 用户模块持久层
+ * @author Leon-Desktop
+ *
+ */
+public class UserDao {
+
+}

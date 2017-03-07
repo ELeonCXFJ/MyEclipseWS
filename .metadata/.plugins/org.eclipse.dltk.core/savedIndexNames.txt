@@ -1,0 +1,2 @@
+F:\Github\MyEclipseWS\.metadata\.plugins\org.eclipse.dltk.core\3011912563.index
+F:\Github\MyEclipseWS\.metadata\.plugins\org.eclipse.dltk.core\598327821.index

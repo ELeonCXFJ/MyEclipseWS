@@ -1,0 +1,14 @@
+package my.housekeeping.user.domain;
+/**
+ * 用户模块的实体类
+ */
+/*
+ * 用户的属性来自于userinfo表以及该模块的所有表单。
+ */
+public class User {
+	private int uid; 			//主键
+	private String userName;	//用户名
+	private String password;	//密码
+	private int role;			//用户类型
+	
+}

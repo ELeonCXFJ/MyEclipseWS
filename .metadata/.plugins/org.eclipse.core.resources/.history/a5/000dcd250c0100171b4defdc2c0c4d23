@@ -1,0 +1,13 @@
+/**
+ * 
+ */
+package my.housekeeping.user.service;
+
+/**
+ *用户模块
+ * @author Leon-Desktop
+ *
+ */
+public class UserService {
+
+}

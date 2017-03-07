@@ -1,0 +1,20 @@
+package my.housekeeping.user.dao;
+
+import org.apache.commons.dbutils.QueryRunner;
+
+import cn.itcast.jdbc.TxQueryRunner;
+
+
+
+/**
+ * 用户模块持久层
+ * @author Leon-Desktop
+ *
+ */
+public class UserDao {
+	private QueryRunner qr = new TxQueryRunner();
+	
+	public Bool ajaxValidatorLoginName(String username){
+		
+	}
+}
