@@ -12,7 +12,6 @@
 <fullyQualifiedTypeName name="java.util.Map"/>
 <fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.MapListHandler"/>
 <fullyQualifiedTypeName name="java.lang.System"/>
-<fullyQualifiedTypeName name="cn.itcast.commons.CommonUtils"/>
 <fullyQualifiedTypeName name="org.junit.Test"/>
 <fullyQualifiedTypeName name="cn.itcast.mail.MailUtils"/>
 <fullyQualifiedTypeName name="javax.mail.Session"/>
@@ -26,4 +25,6 @@
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
 <fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.ScalarHandler"/>
+<fullyQualifiedTypeName name="cn.itcast.commons.CommonUtils"/>
+<fullyQualifiedTypeName name="my.housekeeping.user.domain.User"/>
 </qualifiedTypeNameHistroy>

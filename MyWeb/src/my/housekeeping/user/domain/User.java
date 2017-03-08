@@ -6,12 +6,13 @@ package my.housekeeping.user.domain;
  * 用户的属性来自于userinfo表以及该模块的所有表单。
  */
 public class User {
-	private String uid; 			//主键
+	private int uid; 			//主键
 	private String username;	//用户名
 	private String password;	//密码
 	private int role;			//用户类型
 	private int state;			//用户状态
 	private String email;		//邮箱
+	private int sex;			//性别
 	
 	
 	//register form
@@ -21,9 +22,15 @@ public class User {
 	private String newpassword;
 	
 	//getter and setter
-	public String getUid() {
+	public int getUid() {
 		return uid;
 	}	
+	public int getSex() {
+		return sex;
+	}
+	public void setSex(int sex) {
+		this.sex = sex;
+	}
 	public String getConfirmpassword() {
 		return confirmpassword;
 	}
@@ -36,7 +43,7 @@ public class User {
 	public void setNewpassword(String newpassword) {
 		this.newpassword = newpassword;
 	}
-	public void setUid(String uid) {
+	public void setUid(int uid) {
 		this.uid = uid;
 	}
 	public String getUsername() {
@@ -73,8 +80,8 @@ public class User {
 	public String toString() {
 		return "User [uid=" + uid + ", username=" + username + ", password="
 				+ password + ", role=" + role + ", state=" + state + ", email="
-				+ email + ", confirmpassword=" + confirmpassword
-				+ ", newpassword=" + newpassword + "]";
+				+ email + ", sex=" + sex + ", confirmpassword="
+				+ confirmpassword + ", newpassword=" + newpassword + "]";
 	}
 	
 }

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<workbench progressCount="46" version="2.0">
+<workbench progressCount="45" version="2.0">
 <workbenchAdvisor/>
-<window height="1047" width="974" x="953" y="0">
+<window height="1047" width="974" x="947" y="49">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -47,6 +47,9 @@
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
+<part id="4"/>
+<part id="5"/>
+<part id="6"/>
 </presentation>
 </folder>
 </info>
@@ -59,11 +62,23 @@
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserServlet.java" partName="UserServlet.java" path="F:/Github/MyEclipseWS/MyWeb/src/my/housekeeping/user/web/servlet/UserServlet.java" title="UserServlet.java" tooltip="MyWeb/src/my/housekeeping/user/web/servlet/UserServlet.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyWeb/src/my/housekeeping/user/web/servlet/UserServlet.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1160" selectionTopPixel="145"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="2166" selectionTopPixel="705"/>
 </editor>
 <editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserDao.java" partName="UserDao.java" path="F:/Github/MyEclipseWS/MyWeb/src/my/housekeeping/user/dao/UserDao.java" title="UserDao.java" tooltip="MyWeb/src/my/housekeeping/user/dao/UserDao.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyWeb/src/my/housekeeping/user/dao/UserDao.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1038" selectionTopPixel="0"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1220" selectionTopPixel="117"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="User.java" partName="User.java" path="F:/Github/MyEclipseWS/MyWeb/src/my/housekeeping/user/domain/User.java" title="User.java" tooltip="MyWeb/src/my/housekeeping/user/domain/User.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyWeb/src/my/housekeeping/user/domain/User.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="293" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserService.java" partName="UserService.java" path="F:/Github/MyEclipseWS/MyWeb/src/my/housekeeping/user/service/UserService.java" title="UserService.java" tooltip="MyWeb/src/my/housekeeping/user/service/UserService.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/MyWeb/src/my/housekeeping/user/service/UserService.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="909" selectionTopPixel="117"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TxQueryRunnerTest.java" partName="TxQueryRunnerTest.java" path="F:/Github/MyEclipseWS/tooltest/src/util/test/TxQueryRunnerTest.java" title="TxQueryRunnerTest.java" tooltip="tooltest/src/util/test/TxQueryRunnerTest.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/tooltest/src/util/test/TxQueryRunnerTest.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
@@ -242,6 +257,9 @@
 </view>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="160" org.eclipse.ui.ide.pathField="16" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="584"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -634,115 +652,164 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.jboss.tools.common.core.resources.XModelObjectEditorInputFactory" id="org.jboss.tools.common.model.ui.editor.EditorPartWrapper" path="/MyWeb/WebRoot/WEB-INF/web.xml"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" path="/MyWeb/WebRoot/jsps/user/register.jsp"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyWeb/src/my/housekeeping/user/web/servlet/UserServlet.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyWeb/src/my/housekeeping/user/dao/UserDao.java"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="com.genuitec.eclipse.webdesigner3.editors.jsp" uri="file:/F:/迅雷下载/LibraryManager/LibraryManager/WebRoot/Register.jsp"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.ClassFileEditor" uri="file:/F:/迅雷下载/LibraryManager/LibraryManager/WebRoot/WEB-INF/classes/Servlet/UserAjaxSer.class"/>
-<editor factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" uri="file:/F:/迅雷下载/LibraryManager/LibraryManager/src/Servlet/UserAjaxSer.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyWeb/src/my/housekeeping/user/domain/User.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyWeb/src/my/housekeeping/user/service/UserService.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/MyWeb/src/my/housekeeping/user/web/servlet/UserServlet.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tooltest/src/util/test/CommonUtilstest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tooltest/src/util/test/JdbcUtilsTest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tooltest/src/util/test/CommonUtilstest.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/tooltest/src/util/test/TxQueryRunnerTest.java"/>
 </editors>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="366" y="0"/>
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1123" y="0"/>
 </item>
-<item historyLabel="web.xml" index="0"/>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="366" y="0"/>
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1232" y="0"/>
 </item>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="web.xml" index="0"/>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="366" y="0"/>
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1082" y="0"/>
 </item>
-<item historyLabel="web.xml" index="0"/>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="366" y="0"/>
+<item historyLabel="User.java" index="1">
+<position info="not_deleted" x="465" y="0"/>
 </item>
-<item historyLabel="web.xml" index="0"/>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="366" y="0"/>
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1082" y="0"/>
 </item>
-<item historyLabel="UserDao.java" index="3">
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1307" y="0"/>
+</item>
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1361" y="0"/>
+</item>
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1389" y="0"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="942" y="0"/>
+</item>
+<item historyLabel="User.java" index="1">
+<position info="not_deleted" x="465" y="0"/>
+</item>
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1389" y="0"/>
+</item>
+<item historyLabel="User.java" index="1">
+<position info="not_deleted" x="465" y="0"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="942" y="0"/>
+</item>
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1389" y="0"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="942" y="0"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="737" y="0"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="767" y="0"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="786" y="0"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="938" y="0"/>
+</item>
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1389" y="0"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="938" y="0"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="864" y="4"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="896" y="0"/>
+</item>
+<item historyLabel="UserService.java" index="2">
+<position info="not_deleted" x="931" y="0"/>
+</item>
+<item historyLabel="UserServlet.java" index="3">
+<position info="not_deleted" x="1241" y="0"/>
+</item>
+<item historyLabel="UserServlet.java" index="3">
+<position/>
+</item>
+<item historyLabel="UserServlet.java" index="3">
+<position info="not_deleted" x="2094" y="0"/>
+</item>
+<item historyLabel="UserServlet.java" index="3">
+<position info="not_deleted" x="2104" y="0"/>
+</item>
+<item historyLabel="CommonUtilstest.java" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="UserDao.java" index="3">
-<position info="not_deleted" x="645" y="0"/>
+<item historyLabel="UserServlet.java" index="3">
+<position info="not_deleted" x="2104" y="0"/>
 </item>
-<item historyLabel="UserDao.java" index="3">
-<position info="not_deleted" x="1036" y="0"/>
-</item>
-<item historyLabel="web.xml" index="0"/>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="web.xml" index="0"/>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="366" y="0"/>
-</item>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="UserDao.java" index="3">
-<position info="not_deleted" x="1036" y="0"/>
-</item>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="1162" y="0"/>
-</item>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="UserDao.java" index="3">
-<position info="not_deleted" x="1036" y="0"/>
-</item>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="1162" y="0"/>
-</item>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="1162" y="0"/>
-</item>
-<item historyLabel="UserDao.java" index="3">
-<position info="not_deleted" x="1036" y="0"/>
-</item>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="1162" y="0"/>
-</item>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="1101" y="0"/>
-</item>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="1101" y="0"/>
-</item>
-<item historyLabel="web.xml" index="0"/>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="Register.jsp" index="4"/>
-<item historyLabel="UserAjaxSer.class" index="5"/>
-<item historyLabel="Register.jsp" index="4"/>
-<item historyLabel="UserAjaxSer.java" index="6">
+<item historyLabel="CommonUtilstest.java" index="4">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Register.jsp" index="4"/>
-<item historyLabel="UserAjaxSer.java" index="6">
-<position info="not_deleted" x="1537" y="104"/>
+<item historyLabel="UserServlet.java" index="3">
+<position info="not_deleted" x="2104" y="0"/>
 </item>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="1101" y="0"/>
+<item historyLabel="CommonUtilstest.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="1075" y="0"/>
+<item historyLabel="UserServlet.java" index="3">
+<position info="not_deleted" x="2104" y="0"/>
 </item>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="876" y="0"/>
+<item historyLabel="CommonUtilstest.java" index="4">
+<position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="1160" y="0"/>
+<item historyLabel="UserServlet.java" index="3">
+<position info="not_deleted" x="2104" y="0"/>
 </item>
-<item historyLabel="register.jsp" index="1"/>
-<item historyLabel="UserServlet.java" index="2">
-<position info="not_deleted" x="1160" y="0"/>
+<item historyLabel="UserServlet.java" index="3">
+<position info="not_deleted" x="2148" y="0"/>
 </item>
-<item active="true" historyLabel="UserDao.java" index="3">
-<position info="not_deleted" x="1036" y="0"/>
+<item historyLabel="UserServlet.java" index="3">
+<position/>
+</item>
+<item historyLabel="UserServlet.java" index="3">
+<position/>
+</item>
+<item historyLabel="UserServlet.java" index="3">
+<position/>
+</item>
+<item historyLabel="UserServlet.java" index="3">
+<position info="not_deleted" x="2166" y="0"/>
+</item>
+<item historyLabel="User.java" index="1">
+<position info="not_deleted" x="293" y="0"/>
+</item>
+<item historyLabel="UserServlet.java" index="3">
+<position info="not_deleted" x="2166" y="0"/>
+</item>
+<item historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1220" y="0"/>
+</item>
+<item historyLabel="JdbcUtilsTest.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CommonUtilstest.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TxQueryRunnerTest.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="CommonUtilstest.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="TxQueryRunnerTest.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item active="true" historyLabel="UserDao.java" index="0">
+<position info="not_deleted" x="1220" y="0"/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -768,6 +835,21 @@
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TxQueryRunnerTest.java" tooltip="tooltest/src/util/test/TxQueryRunnerTest.java">
+<persistable path="/tooltest/src/util/test/TxQueryRunnerTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="CommonUtilstest.java" tooltip="tooltest/src/util/test/CommonUtilstest.java">
+<persistable path="/tooltest/src/util/test/CommonUtilstest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="JdbcUtilsTest.java" tooltip="tooltest/src/util/test/JdbcUtilsTest.java">
+<persistable path="/tooltest/src/util/test/JdbcUtilsTest.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserService.java" tooltip="MyWeb/src/my/housekeeping/user/service/UserService.java">
+<persistable path="/MyWeb/src/my/housekeeping/user/service/UserService.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="User.java" tooltip="MyWeb/src/my/housekeeping/user/domain/User.java">
+<persistable path="/MyWeb/src/my/housekeeping/user/domain/User.java"/>
+</file>
 <file factoryID="org.eclipse.ui.ide.FileStoreEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="UserAjaxSer.java" tooltip="F:\迅雷下载\LibraryManager\LibraryManager\src\Servlet\UserAjaxSer.java">
 <persistable uri="file:/F:/迅雷下载/LibraryManager/LibraryManager/src/Servlet/UserAjaxSer.java"/>
 </file>
@@ -797,21 +879,6 @@
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.jboss.tools.common.model.ui.editor.EditorPartWrapper" name="web.xml" tooltip="housekeeping/WebRoot/WEB-INF/web.xml">
 <persistable path="/housekeeping/WebRoot/WEB-INF/web.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.xml.ui.internal.tabletree.XMLMultiPageEditorPart" name="c3p0-config.xml" tooltip="housekeeping/src/c3p0-config.xml">
-<persistable path="/housekeeping/src/c3p0-config.xml"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="bootstrapValidator.js" tooltip="housekeeping/WebRoot/dist/js/bootstrapValidator.js">
-<persistable path="/housekeeping/WebRoot/dist/js/bootstrapValidator.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="myregister.js" tooltip="housekeeping/WebRoot/jsps/js/user/myregister.js">
-<persistable path="/housekeeping/WebRoot/jsps/js/user/myregister.js"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="AServlet.java" tooltip="tools/src/my/test/AServlet.java">
-<persistable path="/tools/src/my/test/AServlet.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.wst.jsdt.ui.CompilationUnitEditor" name="jquery.min.js" tooltip="housekeeping/WebRoot/vendor/jquery/jquery.min.js">
-<persistable path="/housekeeping/WebRoot/vendor/jquery/jquery.min.js"/>
 </file>
 </mruList>
 </workbench>

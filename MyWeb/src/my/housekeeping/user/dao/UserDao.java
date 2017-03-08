@@ -2,6 +2,8 @@ package my.housekeeping.user.dao;
 
 import java.sql.SQLException;
 
+import my.housekeeping.user.domain.User;
+
 import org.apache.commons.dbutils.QueryRunner;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
@@ -38,5 +40,12 @@ public class UserDao {
 			return true;//email不存在
 		else
 			return false; //email已存在
+	}
+	
+	public void register(User user)throws SQLException{
+		String sql = "insert into userinfo(usr,pwd,sex,role,state,email) values(?,?,?,?,?,?)";
+		Object[] params = {user.getUsername(),user.getPassword(),user.getSex(),
+				user.getRole(),user.getState(),user.getEmail()};
+		qr.update(sql,params);
 	}
 }

@@ -157,7 +157,14 @@ $("#mainform").bootstrapValidator({
 					},
 					notEmpty:{
 						message:'电子邮箱不能为空'
-					}
+					},
+					remote:{
+						url:'../../UserServlet?method=ajaxValidatorEmail',
+						data:{username:$("#email").text()},
+						delay : 1000,
+						type:'POST',
+						message:'该邮箱已被注册',
+					},
 				}
 			},
         }

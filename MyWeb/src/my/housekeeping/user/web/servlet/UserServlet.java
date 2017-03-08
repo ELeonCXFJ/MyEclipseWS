@@ -11,7 +11,9 @@ import javax.servlet.ServletException;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+import my.housekeeping.user.domain.User;
 import my.housekeeping.user.service.UserService;
+import cn.itcast.commons.CommonUtils;
 import cn.itcast.servlet.BaseServlet;
 
 /**
@@ -38,9 +40,9 @@ public class UserServlet extends BaseServlet {
 		//通过service获取结果
 		boolean b = userService.ajaxValidatorUserName(username);
 		if(b)
-	       jsonResultString="{\"valid\":true}";
+	       jsonResultString = "{\"valid\":true}";
 		else
-	       jsonResultString="{\"valid\":false}";
+	       jsonResultString = "{\"valid\":false}";
 		
 		
 		System.out.println(b);
@@ -61,8 +63,13 @@ public class UserServlet extends BaseServlet {
 	public String ajaxValidatorEmail(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException,IOException {
 		String email = request.getParameter("email");
+		String jsonResultString = "";
 		boolean b = userService.ajaxValidatorEmail(email);
-		response.getWriter().print(b);
+		if(b)
+		       jsonResultString = "{\"valid\":true}";
+			else
+		       jsonResultString = "{\"valid\":false}";
+		response.getWriter().print(jsonResultString);
 		return null;
 	}
 	
@@ -72,7 +79,9 @@ public class UserServlet extends BaseServlet {
 	 */
 	public String register(HttpServletRequest request,HttpServletResponse response)
 		throws ServletException,IOException {
-		System.out.println("register()...");
-		return null;
+		User formUser = CommonUtils.toBean(request.getParameterMap(), User.class);
+		userService.registerService(formUser);
+		
+		return "index.jsp";
 	}
 }
