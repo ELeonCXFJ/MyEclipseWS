@@ -75,7 +75,6 @@
 </div>
 </div>
 <script type="text/javascript">
-var email = $("#email").text();
 $("#mainform").bootstrapValidator({
 	message:"This value is not valid",
         feedbackIcons: {

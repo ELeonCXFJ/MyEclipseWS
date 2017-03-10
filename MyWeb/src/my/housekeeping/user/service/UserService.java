@@ -47,4 +47,12 @@ public class UserService {
 			throw new RuntimeException(e);
 		}
 	}
+	
+	public boolean loginService(User user){
+		try{
+			return userDao.login(user);
+		}catch (SQLException e){
+			throw new RuntimeException(e);
+		}
+	}
 }

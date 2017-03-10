@@ -62,7 +62,7 @@
 							 <a href="<c:url value='jsps/user/register.jsp'/>">注册</a>
 						</li>
 						<li>
-							<a href="#">登录</a>
+							<a href="<c:url value='jsps/user/login.jsp' />">登录</a>
 						</li>
 						<li class="dropdown">
 							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>

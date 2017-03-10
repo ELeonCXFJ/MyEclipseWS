@@ -84,4 +84,14 @@ public class UserServlet extends BaseServlet {
 		
 		return "index.jsp";
 	}
+	
+	public String login(HttpServletRequest request,HttpServletResponse response)
+		throws ServletException,IOException{
+		User formUser = CommonUtils.toBean(request.getParameterMap(), User.class);
+		boolean b = userService.loginService(formUser);
+		if(b)
+			return "index.jsp";
+		else
+			return "jsps/user/login.jsp";
+	}
 }
