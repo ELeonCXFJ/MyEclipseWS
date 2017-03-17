@@ -5,7 +5,6 @@
 <fullyQualifiedTypeName name="org.apache.commons.dbutils.QueryRunner"/>
 <fullyQualifiedTypeName name="java.sql.SQLException"/>
 <fullyQualifiedTypeName name="cn.itcast.jdbc.JdbcUtils"/>
-<fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.BeanHandler"/>
 <fullyQualifiedTypeName name="java.util.List"/>
 <fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.BeanListHandler"/>
 <fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.MapHandler"/>
@@ -27,4 +26,9 @@
 <fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.ScalarHandler"/>
 <fullyQualifiedTypeName name="cn.itcast.commons.CommonUtils"/>
 <fullyQualifiedTypeName name="my.housekeeping.user.domain.User"/>
+<fullyQualifiedTypeName name="org.omg.CORBA.UserException"/>
+<fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.BeanHandler"/>
+<fullyQualifiedTypeName name="java.net.URLEncoder"/>
+<fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
+<fullyQualifiedTypeName name="my.housekeeping.user.service.exception.UserException"/>
 </qualifiedTypeNameHistroy>

@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package my.housekeeping.user.service.exception;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class UserException extends Exception{
+	public UserException(){
+		super();
+	}
+}

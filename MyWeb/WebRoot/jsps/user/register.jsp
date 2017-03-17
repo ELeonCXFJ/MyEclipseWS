@@ -20,15 +20,10 @@
 <body>
 <div class="container" >
 
-<div>
-
-</div>
-
-<div class="jumbotron well">
-	<h2 align="center">在线家政服务系统</h2>
-	<h3 align="center">用户注册页面</h3></br></br>
 	<div class="row clearfix">
+	<c:import url="../../top.jsp"></c:import>
 		<div class="col-md-12 column">
+		<h3 align="center">用户注册页面</h3></br></br>
 		</div>
 	</div>
 	<div class="row clearfix">
@@ -61,18 +56,14 @@
 				<button type="submit" class="btn btn-primary">注册</button>
 			</form>
 		</div>
+		
 		<div class="col-md-4 column">
 		</div>
+		
 	</div>
-</div>
-	<div>
-		<label for=“bottom">2017毕业设计</br>薛付俊 201320311010</br>指导老师：焦佳佳</label>
 	</div>
-	<div style="display:none;">
-		<label for="hide">bootstrapvalidator引用自：https://github.com/nghuuphuoc/bootstrapvalidator</label>
-	</div>
+	</br></br><c:import url="../../bottom.jsp"></c:import>
 <div>
-</div>
 </div>
 <script type="text/javascript">
 $("#mainform").bootstrapValidator({

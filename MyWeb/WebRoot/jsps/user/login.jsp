@@ -15,13 +15,13 @@
    	<script type="text/javascript" src="${pageContext.request.contextPath}/vendor/bootstrap/js/bootstrap.min.js"></script>
 	<script type="text/javascript" src="${pageContext.request.contextPath}/dist/js/bootstrapValidator.js"></script>
 
+
 </head>
 
   
 <body>
 	<div class="container">
-		<div class="jumbotron well">
-			<h2 align="center">在线家政服务系统</h2>
+		<c:import url="../../top.jsp"></c:import>
 			<h3 align="center">用户登录页面</h3>
 			</br>
 			</br>
@@ -37,19 +37,32 @@
 							<label for="username">用户名</label>
 							<input type="text" name="username" class="form-control" id="username" placeholder="请输入用户名"/>
 						</div>
-
+						
+						<c:choose>
+							<c:when test="${requestScope.code == 'NO_SUCH_USER' }" >
+								<div class="alert alert-danger" id="no_such_user" >用户名或密码错误</div>
+							</c:when>
+							
+							<c:when test="${requestScope.code == 'USER_DISABLED' }" >
+								<div class="alert alert-danger" id="user_disabled" >${Buser } 该用户已被封禁,请联系客服</div>
+							</c:when>
+						</c:choose>
+						
 						<div class="form-group">
 							<label for="password">密码</label>
 							<input type="password" name="password" class="form-control" id="password" placeholder="请输入密码" />
 						</div>
 						</br>
-						<div align="center"><button type="submit" class="btn btn-primary">登录</button></div>
+						<div align="center"><button type="submit" class="btn btn-primary" onclick="login()">登录</button></div>
 					</form>
 				</div>
 			</div>
 		</div>
-	</div>
+		<c:import url="../../bottom.jsp"></c:import>
 <script	type="text/javascript">
+
+	$('#loginalert').show();
+			
 	$("#mainform").bootstrapValidator({
 			message:"this value is not valid",
 			feedbackIcons:{
@@ -86,7 +99,6 @@
 					}
 				}
 			}
-		
 		}
 		
 	});

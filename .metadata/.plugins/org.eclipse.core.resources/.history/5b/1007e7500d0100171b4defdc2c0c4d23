@@ -1,7 +1,0 @@
-package my.housekeeping.user.domain;
-
-public class User {
-/**
- * 用户模块的实体类
- */
-}

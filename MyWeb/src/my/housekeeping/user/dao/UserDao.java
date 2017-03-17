@@ -5,6 +5,7 @@ import java.sql.SQLException;
 import my.housekeeping.user.domain.User;
 
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
 
 import cn.itcast.jdbc.TxQueryRunner;
@@ -18,6 +19,31 @@ import cn.itcast.jdbc.TxQueryRunner;
  */
 public class UserDao {
 	private QueryRunner qr = new TxQueryRunner();
+	
+	
+	/**
+	 * 按uid和password进行查询
+	 */
+	public boolean findByUidAndPassword(int uid,String password) throws SQLException{
+		String sql = "select count(1) from userinfo where uid=? and psw=?";
+		Number number = (Number)qr.query(sql, new ScalarHandler(),uid,password);
+		if(number.intValue() == 0)
+			return false;
+		else
+			return true;
+	}
+	
+	/**
+	 * 修改密码
+	 * @param uid
+	 * @param password
+	 * @throws SQLException 
+	 */
+	public void updatePassword(int uid,String password) throws SQLException{
+		String sql = "update userinfo set psw=? where uid=?";
+		qr.update(sql,password,uid);
+	}
+	
 	/**
 	 * 校验用户名是否已经注册
 	 * @throws SQLException 
@@ -49,19 +75,14 @@ public class UserDao {
 		qr.update(sql,params);
 	}
 	
-	public boolean login(User user) throws SQLException{
-		String sql = "select count(1) from userinfo where (usr=? and pwd=?)";
-		Object[] params = {user.getUsername(),user.getPassword()};
-		Number number = (Number)qr.query(sql, new ScalarHandler(),params);
-		if(number.intValue() == 0)
-		{
-			System.out.println(number.intValue());
-			return false;//用户不存在，显示错误
-		}
-		else
-		{
-			System.out.println(number.intValue());
-			return true;//用户存在，允许登录
-		}
+	/**
+	 * 登录功能实现
+	 * @param user
+	 * @return
+	 * @throws SQLException
+	 */
+	public User login(String username,String password) throws SQLException{
+		String sql = "select * from userinfo where (usr=? and pwd=?)";
+		return qr.query(sql, new BeanHandler<User>(User.class),username,password);
 	}
 }
