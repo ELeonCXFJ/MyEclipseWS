@@ -21,16 +21,14 @@
   
 <body>
 	<div class="container">
-		<c:import url="../../top.jsp"></c:import>
+
+			<div class="row clearfix">
+			<c:import url="../../top.jsp"></c:import>
 			<h3 align="center">用户登录页面</h3>
-			</br>
-			</br>
-			<div class="row clearfix">
-				<div class="col-md-12 column"></div>
-			</div>
-			<div class="row clearfix">
-				<div class="col-md-4 column"></div>
-				<div class="col-md-4 column">
+				<div class="col-md-12 column">
+				<div class="row clearfix">
+					<div class="col-md-4 column"></div>
+					<div class="col-md-4 colum">
 					<form id="mainform" role="form" method="POST" action="<c:url value='/UserServlet'/>">
 					<input type="hidden" name="method" value="login" />
 						<div class="form-group">
@@ -46,6 +44,10 @@
 							<c:when test="${requestScope.code == 'USER_DISABLED' }" >
 								<div class="alert alert-danger" id="user_disabled" >${Buser } 该用户已被封禁,请联系客服</div>
 							</c:when>
+							
+							<c:when test="${requestScope.code == 'NOT_LOGIN' }" >
+								${msg }
+							</c:when>
 						</c:choose>
 						
 						<div class="form-group">
@@ -55,14 +57,14 @@
 						</br>
 						<div align="center"><button type="submit" class="btn btn-primary" onclick="login()">登录</button></div>
 					</form>
+					</div>
+						<div class="col-md-4 column"></div>
 				</div>
 			</div>
 		</div>
+	</div>
 		<c:import url="../../bottom.jsp"></c:import>
 <script	type="text/javascript">
-
-	$('#loginalert').show();
-			
 	$("#mainform").bootstrapValidator({
 			message:"this value is not valid",
 			feedbackIcons:{

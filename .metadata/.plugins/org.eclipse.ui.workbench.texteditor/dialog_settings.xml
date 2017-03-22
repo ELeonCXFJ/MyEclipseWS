@@ -13,18 +13,20 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="update" key="selection"/>
+		<item value="username" key="selection"/>
 		<list key="findhistory">
+			<item value="usr"/>
+			<item value="pwd"/>
+			<item value="psw"/>
+			<item value="exit"/>
+			<item value="top"/>
 			<item value="update"/>
 			<item value="loginAlert"/>
 			<item value="css"/>
-			<item value="remote"/>
-			<item value="email"/>
-			<item value="required"/>
-			<item value="message"/>
-			<item value="equal"/>
 		</list>
 		<list key="replacehistory">
+			<item value="username"/>
+			<item value="password"/>
 		</list>
 	</section>
 	<section name="org.eclipse.jst.jsp.ui.internal.preferences.ui.JSPTemplatePreferencePage$JSPEditTemplateDialog_dialogBounds">

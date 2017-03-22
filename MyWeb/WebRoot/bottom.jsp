@@ -5,15 +5,12 @@
 <html>
 <head>
    <meta charset="utf-8"> 
-   <title>在线家政服务系统主页</title>
-   <link rel="stylesheet" href="./vendor/bootstrap/css/bootstrap.min.css">  
-   <script src="./vendor/jquery/js/jquery.min.js"></script>
-   <script src="./vendor/bootstrap/js/bootstrap.min.js"></script>
+   <title>页脚</title>
 </head>
 <body>
 
 	<div align="center">
-		<label for=“bottom"></br></br></br>2017毕业设计</br>薛付俊 201320311010</br>指导老师：焦佳佳</br>联系电话：15021587045</label>
+		<label for=“bottom"></br></br></br>2017毕业设计&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;薛付俊 201320311010&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;指导老师：焦佳佳&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;联系电话：15021587045</label>
 	</div>
 	<div style="display:none;">
 		<label for="hide">bootstrapvalidator引用自：https://github.com/nghuuphuoc/bootstrapvalidator</label>

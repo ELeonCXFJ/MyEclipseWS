@@ -11,7 +11,7 @@
 
 <div class="container" align="center">
 	<div class="row clearfix">
-		<div class="col-md-12 column">
+		<div class="col-lg-12 col-md-12 col-xs-12 col-sm-12">
 			<nav class="navbar navbar-default" role="navigation">
 				<div class="navbar-header">
 					 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"> <span class="sr-only">Toggle navigation</span><span class="icon-bar"></span><span class="icon-bar"></span><span class="icon-bar"></span></button> <a class="navbar-brand" href="<c:url value='/index.jsp'/>">在线家政服务系统</a>
@@ -19,34 +19,10 @@
 				<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
 					<ul class="nav navbar-nav">
 						<li >
-							 <a href="#">Link</a>
+							 <a href="#">家政</a>
 						</li>
 						<li>
-							 <a href="#">Link</a>
-						</li>
-						<li class="dropdown">
-							 <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<strong class="caret"></strong></a>
-							<ul class="dropdown-menu">
-								<li>
-									 <a href="#">Action</a>
-								</li> 
-								<li>
-									 <a href="#">Another action</a>
-								</li>
-								<li>
-									 <a href="#">Something else here</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									 <a href="#">Separated link</a>
-								</li>
-								<li class="divider">
-								</li>
-								<li>
-									 <a href="#">One more separated link</a>
-								</li>
-							</ul>
+							 <a href="#">月嫂</a>
 						</li>
 					</ul>
 					<ul class="nav navbar-nav navbar-right">
@@ -65,13 +41,13 @@
 									 <a href="#">我的订单</a>
 								</li>
 								<li>
-									 <a href="#">修改密码</a>
+									 <a href="<c:url value='/jsps/user/pwd.jsp'/>">修改密码</a>
 								</li>
 								<li>
 									 <a href="#">购物车</a>
 								</li>
 								<li>
-									<a href="#">退出</a>
+									<a href="<c:url value="/UserServlet?method=exit"/>">退出</a>
 								</li>						
 						</c:otherwise>
 					</c:choose>

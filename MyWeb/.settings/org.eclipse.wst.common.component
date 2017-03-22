@@ -3,6 +3,7 @@
     <wb-module deploy-name="MyWeb">
         <wb-resource deploy-path="/" source-path="/WebRoot"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/WebRoot/jsps/products"/>
         <property name="context-root" value="/MyWeb"/>
         <property name="java-output-path" value="/MyWeb/WebRoot/WEB-INF/classes"/>
     </wb-module>
