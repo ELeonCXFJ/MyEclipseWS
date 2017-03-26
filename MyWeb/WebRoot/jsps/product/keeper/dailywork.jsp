@@ -147,7 +147,10 @@
 			</tr>
 		</table>
 		<div align="center">
-		<button type="button" class="btn btn-primary">立即预约</button>
+			<form method="post" action="<c:url value='/OrderServlet'/>">
+				<input type="hidden" name="method" value="doOrderLink" />
+				<button type="submit" class="btn btn-primary"  >立即预约</button>
+			</form>
 		</div>
 	</div>
 	</div>

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package my.housekeeping.keeper.dao;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class KeeperDao {
+
+}

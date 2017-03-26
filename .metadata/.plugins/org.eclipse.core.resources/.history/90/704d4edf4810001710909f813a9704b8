@@ -1,0 +1,49 @@
+/**
+ * 
+ */
+package my.housekeeping.keeper.web.servlet;
+
+import java.io.IOException;
+import java.io.PrintWriter;
+import java.sql.SQLException;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import my.housekeeping.keeper.domain.Keeper;
+import my.housekeeping.keeper.service.KeeperService;
+
+import cn.itcast.servlet.BaseServlet;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class KeeperServlet extends BaseServlet {
+	KeeperService keeperService = new KeeperService();
+	/**
+	 * The doPost method of the servlet. <br>
+	 *
+	 * This method is called when a form has its tag value method equals to post.
+	 * 
+	 * @param request the request send by the client to the server
+	 * @param response the response send by the server to the client
+	 * @throws ServletException if an error occurred
+	 * @throws IOException if an error occurred
+	 */
+	public void findAllKeeper (HttpServletRequest request, HttpServletResponse response)
+			throws ServletException, IOException {
+		try {
+			List<Keeper> listKeeper = keeperService.findAllKeeper();
+			request.setAttribute("listKeeper", listKeeper);
+			System.out.println("debug:"+listKeeper);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+
+}

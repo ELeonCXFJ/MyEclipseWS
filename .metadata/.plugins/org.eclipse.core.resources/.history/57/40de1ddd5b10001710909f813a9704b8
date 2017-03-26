@@ -1,0 +1,28 @@
+/**
+ * 
+ */
+package my.housekeeping.order.service;
+
+import java.sql.SQLException;
+import java.util.List;
+
+import my.housekeeping.order.dao.OrderDao;
+import my.housekeeping.order.domain.Service;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class OrderService {
+	OrderDao orderDao = new OrderDao();
+	
+	public List<Service> findAllService(){
+		try{
+			return orderDao.findAll();
+		}catch(SQLException e){
+			throw new RuntimeException(e);
+		}
+	}
+	
+	public void addOrder()
+}

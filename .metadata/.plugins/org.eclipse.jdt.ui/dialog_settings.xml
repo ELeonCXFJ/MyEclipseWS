@@ -10,8 +10,8 @@
 	</section>
 	<section name="NewWebXmlLinkCreationWizardPage">
 		<item value="" key="display_name"/>
-		<item value="user servlet" key="description"/>
-		<item value="/housekeeping/WebRoot/WEB-INF" key="filePath"/>
+		<item value="order servlet" key="description"/>
+		<item value="/MyWeb/WebRoot/WEB-INF" key="filePath"/>
 		<item value="true" key="do_mapping"/>
 	</section>
 	<section name="SelfEncapsulateFieldWizard">
@@ -109,6 +109,6 @@
 	</section>
 	<section name="NewJspCreationWizardPage">
 		<item value="Default JSP template" key="templatezh_CN"/>
-		<item value="/MyWeb/WebRoot/WEB-INF" key="filePath"/>
+		<item value="/MyWeb/WebRoot/jsps/order" key="filePath"/>
 	</section>
 </section>

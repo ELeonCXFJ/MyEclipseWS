@@ -13,16 +13,16 @@
 		<item value="false" key="isRegEx"/>
 		<item value="false" key="incremental"/>
 		<item value="false" key="wholeword"/>
-		<item value="username" key="selection"/>
+		<item value="getPara" key="selection"/>
 		<list key="findhistory">
+			<item value="getPara"/>
+			<item value="address"/>
 			<item value="usr"/>
 			<item value="pwd"/>
 			<item value="psw"/>
 			<item value="exit"/>
 			<item value="top"/>
 			<item value="update"/>
-			<item value="loginAlert"/>
-			<item value="css"/>
 		</list>
 		<list key="replacehistory">
 			<item value="username"/>

@@ -1,0 +1,155 @@
+/**
+ * 
+ */
+package my.housekeeping.order.web.servlet;
+
+
+
+import java.io.IOException;
+import java.sql.SQLException;
+import java.util.Date;
+import java.util.List;
+
+import javax.servlet.ServletException;
+import javax.servlet.http.HttpServletRequest;
+import javax.servlet.http.HttpServletResponse;
+
+import my.housekeeping.keeper.domain.Keeper;
+import my.housekeeping.keeper.service.KeeperService;
+
+import my.housekeeping.order.domain.Order;
+import my.housekeeping.order.domain.Service;
+import my.housekeeping.order.service.OrderService;
+import my.housekeeping.user.domain.User;
+
+import cn.itcast.commons.CommonUtils;
+import cn.itcast.servlet.BaseServlet;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+
+public class OrderServlet extends BaseServlet {
+	private OrderService orderService = new OrderService();
+	private KeeperService keeperService = new KeeperService();
+	
+	public String doPay(HttpServletRequest request,HttpServletResponse response)
+			throws ServletException,IOException, SQLException {
+		//String oid = request.getParameter("oid");
+		User user = (User)request.getSession().getAttribute("sessionUser");
+		if(user == null)
+		{
+			request.setAttribute("code", "NOT_LOGIN");
+			//request.setAttribute("msg", "<script>alert('您还没有登录');</script>");
+			request.getSession().setAttribute("prevurl", "/jsps/product/keeper/dailywork.jsp");
+			return "f:/jsps/user/login.jsp";
+		}else{
+			int oid = Integer.parseInt(request.getParameter("oid")); 
+			boolean status = orderService.findByOid(oid);
+			if(if status == false)
+			{
+			orderService.doPay(oid);
+			System.out.println("完成支付订单id为"+oid);
+			request.setAttribute("oid", oid);
+			request.setAttribute("pay", "SUCCESS");
+			
+			List<Order> orderList = orderService.findByUid(user.getUid());
+			System.out.println("显示所有订单"+orderList);
+			request.getSession().setAttribute("orderList", orderList);
+			
+			return "f:jsps/order/myorder.jsp";
+		}
+
+	}
+	
+	public String checkOrderDetail(HttpServletRequest request,HttpServletResponse response)
+			throws ServletException,IOException {
+		User user = (User)request.getSession().getAttribute("sessionUser");
+		List<Service> serviceList = orderService.findAllService();
+		if(user == null)
+		{
+			request.setAttribute("code", "NOT_LOGIN");
+			request.setAttribute("msg", "<script>alert('您还没有登录');</script>");
+			request.getSession().setAttribute("prevurl", "/jsps/product/keeper/dailywork.jsp");
+			return "f:/jsps/user/login.jsp";
+		}else{
+			return null;
+		}
+	}
+	
+	
+	/**
+	 * 进入我的订单中心
+	 * @param request
+	 * @param response
+	 * @return
+	 * @throws ServletException
+	 * @throws IOException
+	 */
+	public String getMyOrder(HttpServletRequest request,HttpServletResponse response)
+			throws ServletException,IOException{
+		User user = (User) request.getSession().getAttribute("sessionUser");
+		if(user == null){
+			request.setAttribute("code", "NOT_LOGIN");
+			request.setAttribute("msg", "<script>alert('您还没有登录');</script>");
+			request.getSession().setAttribute("prevurl", "/jsps/product/keeper/dailywork.jsp");
+			return "f:/jsps/user/login.jsp";			
+		}
+		
+		try {
+			List<Order> orderList = orderService.findByUid(user.getUid());
+			System.out.println("显示所有订单"+orderList);
+			request.getSession().setAttribute("orderList", orderList);
+			
+		} catch (SQLException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+		return "/jsps/order/myorder.jsp";
+	}
+	
+	//点击预约按钮进行跳转
+	public String doOrderLink(HttpServletRequest request,HttpServletResponse response)
+			throws ServletException,IOException {
+		User user = (User)request.getSession().getAttribute("sessionUser");
+		List<Service> serviceList = orderService.findAllService();
+		if(user == null)
+		{
+			request.setAttribute("code", "NOT_LOGIN");
+			request.setAttribute("msg", "<script>alert('您还没有登录');</script>");
+			request.getSession().setAttribute("prevurl", "/jsps/product/keeper/dailywork.jsp");
+			return "f:/jsps/user/login.jsp";
+		}else{
+			System.out.println("do order link success");
+			//System.out.println(serviceList);
+			request.setAttribute("serviceList", serviceList);
+			//request.setAttribute("listEnd", serviceList.size()-1);
+			return "f:/jsps/product/keeper/dailydetail.jsp";
+		}
+	}
+	
+	
+	public String doOrder(HttpServletRequest request,HttpServletResponse response)
+			throws ServletException,IOException {
+		User user = (User)request.getSession().getAttribute("sessionUser");
+		if(user == null)
+		{
+			request.setAttribute("code", "NOT_LOGIN");
+			request.setAttribute("msg", "<script>alert('您还没有登录');</script>");
+			request.getSession().setAttribute("prevurl", "/jsps/product/keeper/dailywork.jsp");
+			return "f:/jsps/user/login.jsp";
+		}else{
+			Order order = CommonUtils.toBean(request.getParameterMap(), Order.class);
+			System.out.println(order);
+			try {
+				orderService.addOrder(order, user);
+			} catch (SQLException e) {
+				// TODO Auto-generated catch block
+				e.printStackTrace();
+			}
+			request.setAttribute("code", "ORDER_SUCCESS");
+			return "f:/index.jsp";
+		}
+	}
+}

@@ -12,7 +12,33 @@
 
 </head>
 <body>
-
+<c:if test="${requestScope.code == 'ORDER_SUCCESS' }">
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+						来自开发者的消息
+					</h4>
+				</div>
+				<div class="modal-body">
+					预约成功，请等待我们与您联系。
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">确定
+					</button>
+				</div>
+			</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+	</div>
+		<script>
+		$("#alertModal").modal('show');
+		</script>
+</c:if>
 <div class="container">
 	<div class="row clearfix">
 	<c:import url="top.jsp" />

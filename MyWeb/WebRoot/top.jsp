@@ -28,27 +28,27 @@
 					<ul class="nav navbar-nav navbar-right">
 					<c:choose>
 						<c:when test="${empty sessionScope.sessionUser }">
-						<li>
-							 <a href="<c:url value='/jsps/user/register.jsp'/>">注册</a>
-						</li>
-						<li>
-							<a href="<c:url value='/jsps/user/login.jsp' />">登录</a>
-						</li>						
+							<li>
+								 <a href="<c:url value='/jsps/user/register.jsp'/>">注册</a>
+							</li>
+							<li>
+								<a href="<c:url value='/jsps/user/login.jsp' />">登录</a>
+							</li>						
 						</c:when>
 						
 						<c:otherwise>
-								<li>
-									 <a href="#">我的订单</a>
-								</li>
-								<li>
-									 <a href="<c:url value='/jsps/user/pwd.jsp'/>">修改密码</a>
-								</li>
-								<li>
-									 <a href="#">购物车</a>
-								</li>
-								<li>
-									<a href="<c:url value="/UserServlet?method=exit"/>">退出</a>
-								</li>						
+							<li>
+								 <a href="<c:url value='/OrderServlet?method=getMyOrder'/>">我的订单</a>
+							</li>
+							<li>
+								 <a href="<c:url value='/jsps/user/pwd.jsp'/>">修改密码</a>
+							</li>
+							<li>
+								 <a href="#">购物车</a>
+							</li>
+							<li>
+								<a href="<c:url value="/UserServlet?method=exit"/>">退出</a>
+							</li>						
 						</c:otherwise>
 					</c:choose>
 					</ul>

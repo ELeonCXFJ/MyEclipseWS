@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package my.housekeeping.keeper.domain;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class Keeper {
+	
+}

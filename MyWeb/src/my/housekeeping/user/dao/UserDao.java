@@ -2,6 +2,7 @@ package my.housekeeping.user.dao;
 
 import java.sql.SQLException;
 
+import my.housekeeping.user.domain.Address;
 import my.housekeeping.user.domain.User;
 
 import org.apache.commons.dbutils.QueryRunner;
@@ -20,6 +21,17 @@ import cn.itcast.jdbc.TxQueryRunner;
 public class UserDao {
 	private QueryRunner qr = new TxQueryRunner();
 	
+	
+	public Address findByUid(int uid) throws SQLException{
+		String sql="select * from address where uid=?";
+		return qr.query(sql, new BeanHandler<Address>(Address.class),uid);
+	}
+	
+	public void addAddress(Address address) throws SQLException{
+		String sql = "insert into address(uid,province,city,district,street,tel) values(?,?,?,?,?,?)";
+		Object[] params = {address.getUid(),address.getProvince(),address.getCity(),address.getDistrict(),address.getStreet(),address.getTel()};
+		qr.update(sql,params);
+	}
 	
 	/**
 	 * 按uid和password进行查询

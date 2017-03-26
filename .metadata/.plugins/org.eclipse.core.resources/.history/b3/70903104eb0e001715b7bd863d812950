@@ -1,0 +1,49 @@
+/**
+ * 
+ */
+package my.housekeeping.order.domain;
+
+import my.housekeeping.user.domain.User;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class Order {
+	private int oid; //primary key
+	private String ordertime; //order time
+	private int status;//order's status
+	private String address;
+	private User owner;// the order's owner
+	public int getOid() {
+		return oid;
+	}
+	public void setOid(int oid) {
+		this.oid = oid;
+	}
+	public String getOrdertime() {
+		return ordertime;
+	}
+	public void setOrdertime(String ordertime) {
+		this.ordertime = ordertime;
+	}
+	public int getStatus() {
+		return status;
+	}
+	public void setStatus(int status) {
+		this.status = status;
+	}
+	public String getAddress() {
+		return address;
+	}
+	public void setAddress(String address) {
+		this.address = address;
+	}
+	public User getOwner() {
+		return owner;
+	}
+	public void setOwner(User owner) {
+		this.owner = owner;
+	}
+	
+}

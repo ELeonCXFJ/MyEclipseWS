@@ -6,6 +6,7 @@ package my.housekeeping.user.service;
 import java.sql.SQLException;
 
 import my.housekeeping.user.dao.UserDao;
+import my.housekeeping.user.domain.Address;
 import my.housekeeping.user.domain.User;
 import my.housekeeping.user.service.exception.UserException;
 
@@ -17,6 +18,25 @@ import my.housekeeping.user.service.exception.UserException;
 
 public class UserService {
 	private UserDao userDao = new UserDao();
+
+	
+	/**
+	 * 添加
+	 * @param uid
+	 * @param address
+	 */
+	public void addAddressService(int uid,Address address) throws UserException{
+		address.setCity("上海市");
+		address.setProvince("上海市");
+		address.setUid(uid);
+		try{
+			userDao.addAddress(address);
+		}catch(SQLException e){
+			throw new RuntimeException(e);
+		}
+	}
+	
+	
 	
 	/**
 	 * 修改密码

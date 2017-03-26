@@ -1,0 +1,68 @@
+/**
+ * 
+ */
+package my.housekeeping.order.dao;
+
+import java.sql.SQLException;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+
+import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanListHandler;
+import org.apache.commons.dbutils.handlers.MapListHandler;
+import org.apache.commons.dbutils.handlers.ScalarHandler;
+
+import my.housekeeping.order.domain.Order;
+import my.housekeeping.order.domain.Service;
+import my.housekeeping.user.domain.User;
+import cn.itcast.jdbc.TxQueryRunner;
+import cn.itcast.servlet.BaseServlet;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class OrderDao extends BaseServlet {
+	private QueryRunner qr = new TxQueryRunner();
+	
+
+	
+	public List<Service> findAll() throws SQLException{
+		/*
+		 * 查询所有服务类型
+		 * 将服务类型放到数据库中有利于后期维护
+		 */
+		String sql = "select * from service order by sid";
+		List<Service> serviceList = qr.query(sql, new BeanListHandler<Service>(Service.class));
+		return serviceList;
+	}
+	
+	public void addOrder(Order order) throws SQLException{
+		String sql = "insert into `order`(ordertime,`status`,street,uid,appointment,other,district,tel,service) values(?,?,?,?,?,?,?,?,?)";
+		Object[] params = {order.getOrdertime(),order.getStatus(),order.getStreet(),
+				order.getOwner().getUid(),order.getAppointment(),order.getOther(),order.getDistrict(),
+				order.getTel(),order.getService()};
+		qr.update(sql,params);
+	}
+	
+	public List<Order> findByUid(int uid) throws SQLException{
+		String sql = "select * from `order` where uid=? order by status";
+		List<Order> orderList = qr.query(sql, new BeanListHandler<Order>(Order.class),uid);
+		return orderList;
+	}
+	
+	public boolean findByOid(int oid) throws SQLException{
+		String sql = "select `status` from `order` where oid=?";
+		Number number = (Number)qr.query(sql,new ScalarHandler(),oid);
+		if(number.intValue() == 0)
+			return false; //未支付
+		else
+			return true;  //已支付
+	}
+	
+	public void doPay(int oid) throws SQLException{
+		String sql = "update `order` set `status`=1 where oid=?";
+		qr.update(sql,oid);
+	}
+}

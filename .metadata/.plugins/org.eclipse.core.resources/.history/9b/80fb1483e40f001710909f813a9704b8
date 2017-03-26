@@ -1,0 +1,14 @@
+/**
+ * 
+ */
+package my.housekeeping.keeper.service;
+
+import my.housekeeping.keeper.dao.KeeperDao;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class KeeperService {
+	KeeperDao keeperDao = new KeeperDao();
+}

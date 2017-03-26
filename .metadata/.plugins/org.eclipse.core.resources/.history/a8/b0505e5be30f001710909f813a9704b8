@@ -1,0 +1,17 @@
+/**
+ * 
+ */
+package my.housekeeping.keeper.dao;
+
+import org.apache.commons.dbutils.QueryRunner;
+
+import cn.itcast.jdbc.TxQueryRunner;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class KeeperDao {
+	private QueryRunner qr = new TxQueryRunner();
+	
+}

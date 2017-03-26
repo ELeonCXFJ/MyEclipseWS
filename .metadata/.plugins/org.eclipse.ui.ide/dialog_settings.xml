@@ -3,15 +3,22 @@
 	<section name="DialogMarkerPropertiesDialogSettings">
 		<item value="726" key="DIALOG_WIDTH"/>
 		<item value="319" key="DIALOG_Y_ORIGIN"/>
-		<item value="124" key="DIALOG_X_ORIGIN"/>
 		<item value="307" key="DIALOG_HEIGHT"/>
+		<item value="124" key="DIALOG_X_ORIGIN"/>
+		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
+	</section>
+	<section name="SaveAsDialogSettings">
+		<item value="525" key="DIALOG_WIDTH"/>
+		<item value="92" key="DIALOG_Y_ORIGIN"/>
+		<item value="654" key="DIALOG_HEIGHT"/>
+		<item value="706" key="DIALOG_X_ORIGIN"/>
 		<item value="1|Microsoft YaHei UI|9.0|0|WINDOWS|1|-12|0|0|0|400|0|0|0|1|0|0|0|0|Microsoft YaHei UI" key="DIALOG_FONT_NAME"/>
 	</section>
 	<section name="CleanDialogSettings">
 		<item value="500" key="DIALOG_WIDTH"/>
 		<item value="263" key="DIALOG_Y_ORIGIN"/>
-		<item value="391" key="DIALOG_HEIGHT"/>
 		<item value="1190" key="DIALOG_X_ORIGIN"/>
+		<item value="391" key="DIALOG_HEIGHT"/>
 		<item value="true" key="TOGGLE_SELECTED"/>
 	</section>
 </section>

@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package my.housekeeping.user.domain;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class address {
+
+}

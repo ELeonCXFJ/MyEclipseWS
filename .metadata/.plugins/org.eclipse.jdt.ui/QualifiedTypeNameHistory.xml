@@ -23,12 +23,13 @@
 <fullyQualifiedTypeName name="javax.servlet.http.HttpServletResponse"/>
 <fullyQualifiedTypeName name="java.io.IOException"/>
 <fullyQualifiedTypeName name="javax.servlet.ServletException"/>
-<fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.ScalarHandler"/>
 <fullyQualifiedTypeName name="cn.itcast.commons.CommonUtils"/>
-<fullyQualifiedTypeName name="my.housekeeping.user.domain.User"/>
 <fullyQualifiedTypeName name="org.omg.CORBA.UserException"/>
 <fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.BeanHandler"/>
 <fullyQualifiedTypeName name="java.net.URLEncoder"/>
 <fullyQualifiedTypeName name="javax.servlet.http.Cookie"/>
 <fullyQualifiedTypeName name="my.housekeeping.user.service.exception.UserException"/>
+<fullyQualifiedTypeName name="my.housekeeping.order.service.OrderService"/>
+<fullyQualifiedTypeName name="my.housekeeping.user.domain.User"/>
+<fullyQualifiedTypeName name="org.apache.commons.dbutils.handlers.ScalarHandler"/>
 </qualifiedTypeNameHistroy>

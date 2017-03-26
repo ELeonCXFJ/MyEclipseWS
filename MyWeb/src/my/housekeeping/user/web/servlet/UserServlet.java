@@ -13,6 +13,8 @@ import javax.servlet.http.Cookie;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
+
+import my.housekeeping.user.domain.Address;
 import my.housekeeping.user.domain.User;
 import my.housekeeping.user.service.UserService;
 import my.housekeeping.user.service.exception.UserException;
@@ -26,6 +28,23 @@ import cn.itcast.servlet.BaseServlet;
  */
 public class UserServlet extends BaseServlet {
 	private UserService userService = new UserService();
+	
+	public String addAddress(HttpServletRequest request,HttpServletResponse response)
+			throws ServletException,IOException{
+		User user  = (User)request.getSession().getAttribute("sessionUser");
+		Address formAddress = CommonUtils.toBean(request.getParameterMap(), Address.class);
+		if(user == null){
+			request.setAttribute("code", "NOT_LOGIN");
+			request.getSession().invalidate();
+			request.removeAttribute("code");
+			return "f:/jsps/user/login.jsp";
+		}else{
+				//userService.addAddressService(user.getUid(), formAddress);
+				return "f:/jsps/user/addressmanager.jsp";
+			}
+
+	}
+	
 	
 	public String exit(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException,IOException{
@@ -42,14 +61,14 @@ public class UserServlet extends BaseServlet {
 		User user = (User)request.getSession().getAttribute("sessionUser");
 		//若没有的登录，则返回登录界面
 		if(user == null){
-			System.out.println("还没登陆bug");
+			System.out.println("还没登陆");
 			request.setAttribute("msg","<script>alert('您还没有登录');</script>");
 			request.setAttribute("code", "NOT_LOGIN");
 			request.getSession().invalidate();
+			request.removeAttribute("code");
 			return "f:/jsps/user/login.jsp";
 		}
 		try{
-			request.setAttribute("msg","<script>alert('您还没有登录');</script>");
 			userService.updatePassword(user.getUid(), formUser.getNewpassword(),
 					formUser.getPassword());
 			request.setAttribute("code", "SUCCESS");
@@ -131,14 +150,16 @@ public class UserServlet extends BaseServlet {
 		//System.out.println("1");
 		User user = userService.loginService(formUser);
 		//System.out.println("2");
+		//获取用户从哪个页面跳转到登录
+		String prevUrl = (String) request.getSession().getAttribute("prevurl");
+		System.out.println(prevUrl);
 		if(user == null){
 			request.setAttribute("code", "NO_SUCH_USER");
 			request.setAttribute("user", formUser);
 			return "f:/jsps/user/login.jsp";
 		}else{
 			if(user.getState() == 0){
-				request.setAttribute("msg","<script>alert('您还没有登录');</script>");
-
+				//request.setAttribute("msg","<script>alert('您还没有登录');</script>");
 				request.setAttribute("code", "USER_DISABLED");
 				request.setAttribute("Buser", formUser.getUsername());
 				request.setAttribute("user", formUser);
@@ -150,7 +171,14 @@ public class UserServlet extends BaseServlet {
 				cookie.setMaxAge(1000 * 60 * 60 * 24 * 10);
 				response.addCookie(cookie);
 				//System.out.println("login success");
-				return "r:/index.jsp";
+				if(prevUrl == null)
+					return "r:/index.jsp";
+				else if(prevUrl == "f:/jsps/product/keeper/dailydetail.jsp"){
+						return "f:/jsps/product/keeper/dailywork.jsp";
+				}else{
+					request.getSession().removeAttribute("prevurl");
+					return ("f:"+prevUrl);
+				}
 			}
 		}
 	}

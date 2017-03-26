@@ -20,6 +20,34 @@
 
   
 <body>
+<c:if test="${sessionScope.code == 'NOT_LOGIN' }">
+	<!-- 模态框（Modal） -->
+	<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+						来自开发者的消息
+					</h4>
+				</div>
+				<div class="modal-body">
+					您还没有登录，请先登录。
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">确定
+					</button>
+				</div>
+			</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+	</div>
+		<script>
+		$("#alertModal").modal('show');
+		</script>
+	<c:remove var="code" scope="session"/>
+</c:if>
 	<div class="container">
 
 			<div class="row clearfix">
@@ -33,7 +61,7 @@
 					<input type="hidden" name="method" value="login" />
 						<div class="form-group">
 							<label for="username">用户名</label>
-							<input type="text" name="username" class="form-control" id="username" placeholder="请输入用户名"/>
+							<input type="text" name="username" value="${user.username }" class="form-control" id="username" placeholder="请输入用户名"/>
 						</div>
 						
 						<c:choose>
@@ -45,9 +73,6 @@
 								<div class="alert alert-danger" id="user_disabled" >${Buser } 该用户已被封禁,请联系客服</div>
 							</c:when>
 							
-							<c:when test="${requestScope.code == 'NOT_LOGIN' }" >
-								${msg }
-							</c:when>
 						</c:choose>
 						
 						<div class="form-group">
@@ -55,7 +80,7 @@
 							<input type="password" name="password" class="form-control" id="password" placeholder="请输入密码" />
 						</div>
 						</br>
-						<div align="center"><button type="submit" class="btn btn-primary" onclick="login()">登录</button></div>
+						<div align="center"><button type="submit" class="btn btn-primary">登录</button></div>
 					</form>
 					</div>
 						<div class="col-md-4 column"></div>

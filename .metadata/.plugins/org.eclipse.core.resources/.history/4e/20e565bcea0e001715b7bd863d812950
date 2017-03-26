@@ -1,0 +1,12 @@
+/**
+ * 
+ */
+package my.housekeeping.order.domain;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class Order {
+
+}

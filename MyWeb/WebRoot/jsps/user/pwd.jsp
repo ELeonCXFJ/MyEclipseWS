@@ -57,7 +57,7 @@
 							</c:when>
 						</c:choose>
 						</br>
-						<div align="center"><button type="submit" class="btn btn-primary" onclick="login()">修改密码</button></div>
+						<div align="center"><button type="submit" class="btn btn-primary">修改密码</button></div>
 					</form>
 				<!-- mainform 结束！ -->
 				</div>

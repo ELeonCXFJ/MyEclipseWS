@@ -1,0 +1,55 @@
+/**
+ * 
+ */
+package my.housekeeping.order.service;
+
+import java.sql.SQLException;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.List;
+
+import my.housekeeping.order.dao.OrderDao;
+import my.housekeeping.order.domain.Order;
+import my.housekeeping.order.domain.Service;
+import my.housekeeping.user.domain.User;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class OrderService {
+	OrderDao orderDao = new OrderDao();
+	
+	public List<Service> findAllService(){
+		try{
+			return orderDao.findAll();
+		}catch(SQLException e){
+			throw new RuntimeException(e);
+		}
+	}
+	
+	public void addOrder(Order order,User user) throws SQLException{
+		Date date = new Date();
+		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+		String time = format.format(date);
+		order.setOwner(user);
+		order.setStatus(0);//状态，未完成
+		order.setOrdertime(time);
+		orderDao.addOrder(order);
+	}
+	
+	public List<Order> findByUid(int uid) throws SQLException{
+		try{
+			return orderDao.findByUid(uid);
+		}catch(SQLException e){
+			throw new RuntimeException(e);
+		}
+	}
+	
+	public void doPay(int oid) throws SQLException{
+		orderDao.doPay(oid);
+	}
+	
+	public boolean findByOid(int oid)
+}

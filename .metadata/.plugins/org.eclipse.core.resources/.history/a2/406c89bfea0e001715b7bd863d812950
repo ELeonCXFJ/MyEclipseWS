@@ -1,0 +1,16 @@
+/**
+ * 
+ */
+package my.housekeeping.order.domain;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class Order {
+	private int oid; //primary key
+	private String ordertime; //order time
+	private int status;//order's status
+	private String address;
+	private User owner;// the order's owner
+}

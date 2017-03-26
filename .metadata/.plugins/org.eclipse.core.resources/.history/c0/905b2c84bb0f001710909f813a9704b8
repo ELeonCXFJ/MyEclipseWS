@@ -1,0 +1,20 @@
+/**
+ * 
+ */
+package my.housekeeping.keeper.domain;
+
+/**
+ * @author Leon-Desktop
+ *
+ */
+public class Keeper {
+	private int kid;
+	private String name;
+	private String age;
+	private String hometown;
+	private String education;
+	private int sex;
+	private String exp;
+	private String image;
+	private String tel;
+}
