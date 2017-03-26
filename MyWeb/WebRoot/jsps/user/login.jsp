@@ -20,7 +20,7 @@
 
   
 <body>
-<c:if test="${sessionScope.code == 'NOT_LOGIN' }">
+<c:if test="${sessionScope.code == 'NOT_LOGIN' or requestScope.code == 'NOT_LOGIN' }">
 	<!-- 模态框（Modal） -->
 	<div class="modal fade" id="alertModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
 		<div class="modal-dialog">
@@ -47,6 +47,7 @@
 		$("#alertModal").modal('show');
 		</script>
 	<c:remove var="code" scope="session"/>
+	<c:remove var="code" scope="request"/>
 </c:if>
 	<div class="container">
 

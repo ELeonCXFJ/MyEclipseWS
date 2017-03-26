@@ -9,6 +9,7 @@ import java.util.List;
 import java.util.Map;
 
 import org.apache.commons.dbutils.QueryRunner;
+import org.apache.commons.dbutils.handlers.BeanHandler;
 import org.apache.commons.dbutils.handlers.BeanListHandler;
 import org.apache.commons.dbutils.handlers.MapListHandler;
 import org.apache.commons.dbutils.handlers.ScalarHandler;
@@ -47,9 +48,14 @@ public class OrderDao extends BaseServlet {
 	}
 	
 	public List<Order> findByUid(int uid) throws SQLException{
-		String sql = "select * from `order` where uid=? order by status";
+		String sql = "select * from `order` where uid=? order by status ASC, oid DESC";
 		List<Order> orderList = qr.query(sql, new BeanListHandler<Order>(Order.class),uid);
 		return orderList;
+	}
+	
+	public Order findAllByOid(int oid) throws SQLException{
+		String sql = "select * from `order` where oid=?";
+		return qr.query(sql, new BeanHandler<Order>(Order.class),oid);
 	}
 	
 	public boolean findByOid(int oid) throws SQLException{

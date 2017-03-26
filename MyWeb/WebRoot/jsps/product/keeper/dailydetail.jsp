@@ -59,7 +59,7 @@
 						
 						<div class="form-group">
 							<label for="time">请选择时间</label>
-							<div class="input-group date form_datetime" data-time="today"  data-date-format="yyyy-MM-dd HH:mm" data-link-field="appointment">
+							<div class="input-group date form_datetime" data-time="today"  data-date-format="yyyy-MM-dd HH:ii" data-link-field="appointment">
 			                    <input class="form-control" name="appointment" size="16" type="text" value="" readonly>
 			                    <span class="input-group-addon"><span class="glyphicon glyphicon-remove"></span></span>
 								<span class="input-group-addon"><span class="glyphicon glyphicon-th"></span></span>

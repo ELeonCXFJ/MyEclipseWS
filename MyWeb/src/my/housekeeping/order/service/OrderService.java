@@ -29,6 +29,14 @@ public class OrderService {
 		}
 	}
 	
+	public Order findAllByOid(int oid){
+		try{
+			return orderDao.findAllByOid(oid);
+		}catch(SQLException e){
+			throw new RuntimeException(e);
+		}
+	}
+	
 	public void addOrder(Order order,User user) throws SQLException{
 		Date date = new Date();
 		DateFormat format = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");

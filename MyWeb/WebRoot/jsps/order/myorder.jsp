@@ -51,23 +51,88 @@
 		<script>
 			$('#alertModal').modal({backdrop:'static',keyboard:false});
 			$('#alertModal').modal('show');
-			$('#alertModal').modal('hide.bs.modal',function(){
-			var xmlhttp;    
-			  if (window.XMLHttpRequest)
-			  {
-			    // IE7+, Firefox, Chrome, Opera, Safari 浏览器执行代码
-			    xmlhttp=new XMLHttpRequest();
-			  }
-			  else
-			  {
-			    // IE6, IE5 浏览器执行代码
-			    xmlhttp=new ActiveXObject("Microsoft.XMLHTTP");
-			  }
-			  xmlhttp.open("POST","/OrderServlet?getMyOrder"+str,false);
-			  xmlhttp.send();
-			});
 		</script>
 	<c:remove var="pay" scope="request"/>
+	</c:if><!-- 支付完成模态框 -->
+
+	<c:if test="${not empty sessionScope.orderdetail }">
+	
+	<div class="modal fade" id="detail" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+		<div class="modal-dialog">
+			<div class="modal-content">
+				<div class="modal-header">
+					<button type="button" class="close" data-dismiss="modal" aria-hidden="true">
+						&times;
+					</button>
+					<h4 class="modal-title" id="myModalLabel">
+						来自开发者的消息
+					</h4>
+				</div>
+				<div class="modal-body">
+					<table class="table table-striped">
+					  <caption>订单详情</caption>
+					  <thead>
+					  </thead>
+					  <tbody>
+					    <tr>
+					      <td><label for="name">您的用户名</label></td>
+					      <td>${sessionUser.username }</td>
+					    </tr>
+					    <tr>
+					      <td><label for="service">预约服务</label></td>
+					      <td>${orderdetail.service }</td>
+					    </tr>
+					    <tr>
+					      <td><label for="tel">联系电话</label></td>
+					      <td>${orderdetail.tel }</td>
+					    </tr>
+					    <tr>
+					      <td><label for="address">地址</label></td>
+					      <td>上海市 ${orderdetail.district }&nbsp;${orderdetail.street }</td>
+					    </tr>
+					    <tr>
+					      <td><<label for="id">订单id</label></td>
+					      <td>${orderdetail.oid }</td>
+					    </tr>
+					    <tr>
+					      <td><label for="appointment">预约时间</label></td>
+					      <td>${orderdetail.appointment }</td>
+					    </tr>
+					    <tr>
+					      <td><label for="ordertime">下单时间</label></td>
+					      <td>${orderdetail.ordertime }</td>
+					    </tr>
+					    <tr>
+					      <td><label for="other">额外要求</label></td>
+					      <td>${orderdetail.other}</td>
+					    </tr>
+					    <tr>
+					      <td><label for="tel">联系电话</label></td>
+					      <td>
+							<c:if test="${orderdetail.status == 1 }">
+								<div class="text-success">已完成</div>
+							</c:if>
+							<c:if test="${orderdetail.status == 0 }">
+								<div class="text-danger">未支付</div>
+							</c:if>
+						  </td>
+					    </tr>
+					  </tbody>
+					</table>
+					</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-primary" data-dismiss="modal">确定
+					</button>
+				</div>
+			</div><!-- /.modal-content -->
+	</div><!-- /.modal -->
+	</div>
+		<script>
+			$('#detail').modal({backdrop:'static',keyboard:false});
+			$('#detail').modal('show');
+		</script>
+	<c:remove var="pay" scope="request"/>
+	<c:remove var="orderdetail" scope="session"/>
 	</c:if>
 
 	<c:import url="/top.jsp" />

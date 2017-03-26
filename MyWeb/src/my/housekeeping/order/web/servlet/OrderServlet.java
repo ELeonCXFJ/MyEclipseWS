@@ -69,7 +69,7 @@ public class OrderServlet extends BaseServlet {
 	public String checkOrderDetail(HttpServletRequest request,HttpServletResponse response)
 			throws ServletException,IOException {
 		User user = (User)request.getSession().getAttribute("sessionUser");
-		List<Service> serviceList = orderService.findAllService();
+		int oid = Integer.parseInt(request.getParameter("oid"));
 		if(user == null)
 		{
 			request.setAttribute("code", "NOT_LOGIN");
@@ -77,7 +77,9 @@ public class OrderServlet extends BaseServlet {
 			request.getSession().setAttribute("prevurl", "/jsps/product/keeper/dailywork.jsp");
 			return "f:/jsps/user/login.jsp";
 		}else{
-			return null;
+			Order orderdetail = orderService.findAllByOid(oid);
+			request.getSession().setAttribute("orderdetail", orderdetail);
+			return "f:/jsps/order/myorder.jsp";
 		}
 	}
 	
